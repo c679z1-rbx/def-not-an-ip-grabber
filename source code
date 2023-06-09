@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IP Grabber</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.getJSON("https://api.ipify.org?format=json", function(data){
+                var ipAddress = data.ip;
+                $("#ipAddress").text("Your IP Address: " + ipAddress);
+                // You can also send the IP address to your server for further processing if desired.
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>IP Grabber</h1>
+    <p id="ipAddress"></p>
+</body>
+</html>
